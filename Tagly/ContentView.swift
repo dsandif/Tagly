@@ -16,6 +16,7 @@ enum Mode {
 struct ContentView: View {
     @State var audioPlayer: AVAudioPlayer!
     @State var mode = Mode.ahead
+    let synthesizer = AVSpeechSynthesizer()
     let timer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
     
     var body: some View {
@@ -138,20 +139,18 @@ struct ContentView: View {
         if mode == .ahead {
             withAnimation(.easeInOut(duration: 1)) {
                 mode = .right
+                speak()
             }
         } else {
             withAnimation(.easeInOut(duration: 1)) {
                 mode = .ahead
                 Haptic.impact(.heavy).generate()
-                
-                #if !DEBUG
                 playSound()
-                #endif
             }
         }
     }
     
-    func playSound() {
+    func playSound() -> Void {
         // Load a local sound file
         guard let soundFileURL = Bundle.main.path(
             forResource: "sound_effect",
@@ -162,6 +161,21 @@ struct ContentView: View {
 
         self.audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundFileURL))
         self.audioPlayer.play()
+    }
+    
+    func speak() -> Void {
+        if(mode == .ahead){
+            let utterance = AVSpeechUtterance(string: "20 feet ahead")
+            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+            synthesizer.speak(utterance)
+            
+        }else if(mode == .right){
+            let utterance = AVSpeechUtterance(string: "20 feet to your right")
+            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+            synthesizer.speak(utterance)
+        }
+        
+        
     }
 }
 

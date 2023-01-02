@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A64007F429629E8C006FCE4C /* sound_effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A64007F329629E8C006FCE4C /* sound_effect.mp3 */; };
 		A6A8B8B92962957F00ED69EE /* TaglyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A8B8B82962957F00ED69EE /* TaglyApp.swift */; };
 		A6A8B8BB2962957F00ED69EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A8B8BA2962957F00ED69EE /* ContentView.swift */; };
 		A6A8B8BD2962958000ED69EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6A8B8BC2962958000ED69EE /* Assets.xcassets */; };
 		A6A8B8C02962958000ED69EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6A8B8BF2962958000ED69EE /* Preview Assets.xcassets */; };
+		A6A8B8C82962963300ED69EE /* Haptica in Frameworks */ = {isa = PBXBuildFile; productRef = A6A8B8C72962963300ED69EE /* Haptica */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A64007F329629E8C006FCE4C /* sound_effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound_effect.mp3; sourceTree = "<group>"; };
 		A6A8B8B52962957F00ED69EE /* Tagly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tagly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6A8B8B82962957F00ED69EE /* TaglyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaglyApp.swift; sourceTree = "<group>"; };
 		A6A8B8BA2962957F00ED69EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6A8B8C82962963300ED69EE /* Haptica in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +57,7 @@
 			children = (
 				A6A8B8B82962957F00ED69EE /* TaglyApp.swift */,
 				A6A8B8BA2962957F00ED69EE /* ContentView.swift */,
+				A64007F329629E8C006FCE4C /* sound_effect.mp3 */,
 				A6A8B8BC2962958000ED69EE /* Assets.xcassets */,
 				A6A8B8BE2962958000ED69EE /* Preview Content */,
 			);
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = Tagly;
+			packageProductDependencies = (
+				A6A8B8C72962963300ED69EE /* Haptica */,
+			);
 			productName = Tagly;
 			productReference = A6A8B8B52962957F00ED69EE /* Tagly.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = A6A8B8AC2962957F00ED69EE;
+			packageReferences = (
+				A6A8B8C62962963300ED69EE /* XCRemoteSwiftPackageReference "Haptica" */,
+			);
 			productRefGroup = A6A8B8B62962957F00ED69EE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +138,7 @@
 			files = (
 				A6A8B8C02962958000ED69EE /* Preview Assets.xcassets in Resources */,
 				A6A8B8BD2962958000ED69EE /* Assets.xcassets in Resources */,
+				A64007F429629E8C006FCE4C /* sound_effect.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +279,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Tagly/Preview Content\"";
+				DEVELOPMENT_TEAM = 229B6HXMD4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -295,6 +308,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Tagly/Preview Content\"";
+				DEVELOPMENT_TEAM = 229B6HXMD4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -337,6 +351,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A6A8B8C62962963300ED69EE /* XCRemoteSwiftPackageReference "Haptica" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/efremidze/Haptica";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A6A8B8C72962963300ED69EE /* Haptica */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A6A8B8C62962963300ED69EE /* XCRemoteSwiftPackageReference "Haptica" */;
+			productName = Haptica;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A6A8B8AD2962957F00ED69EE /* Project object */;
 }

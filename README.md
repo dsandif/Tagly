@@ -1,4 +1,4 @@
-# Tagly
+# Tagly <img src="https://github.com/dsandif/Tagly/blob/main/Tagly/appstore.png?raw=true" style="width:22px; height:22px">
 An example AirTag finder with haptic feedback and spoken directions for those with disabilites
 
 
